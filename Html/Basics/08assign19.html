@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body{
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background: bisque;
+        }
+
+        #container{
+            display: flex;
+            border: 1px solid white;
+            width: 600px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .img-box{
+            width: 300px;
+            height: 400px;
+        }
+
+        .img-box img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content{
+            width: 300px;
+            height: 400px;
+            padding: 25px 25px 20px 25px;
+            background: white;
+        }
+        .brand{
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: gray;
+            margin-bottom: 12px;
+        }
+        h1{
+            font-family: Georgia, serif;
+            font-size: 31px;
+            margin: 0 0 18px;
+            line-height: 1.1;
+        }
+        p{
+            margin: 0 0 18px;
+            color: gray;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .price-box{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            font-family:DM Serif Display, serif;
+            font-size: 30px;
+        }
+        .price-box h2{
+            margin: 0;
+            color: rgb(9, 117, 9);
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .old-price{
+            margin: 0;
+            text-decoration: line-through;
+            color: gray;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+        }
+        button{
+            background-color:rgb(11, 151, 11);
+            color: white;
+            padding: 12px 22px;
+            border: none;
+            width: 100%;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="img-box">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.u-AC1-KS3BHjrxPFkiZw7gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Perfume bottle">
+        </div>
+        <div class="content">
+            <div class="brand">PERFUME</div>
+            <h1>
+                Gabrielle<br>
+                Essence Eau<br>
+                De Parfum
+            </h1>
+            <p>
+                A floral, solar and voluptuous<br>
+                interpretation composed by<br>
+                Olivier Polge, Perfumer-Creator<br>
+                for the House of CHANEL.
+            </p>
+            <div class="price-box">
+                <h2>$149.99</h2>
+                <p class="old-price">$169.99</p>
+            </div>
+            <button> <i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;ADD TO CART</button>
+        </div>
+    </div>
+</body>
+</html>

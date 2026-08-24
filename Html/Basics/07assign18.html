@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #container{
+            height: 600px;
+            width: 600px;
+            background-color: rgba(32, 37, 135, 0.932);
+            border-radius: 40px;
+            margin: 50px auto;
+            padding: 50px;
+        }
+        #star_container{
+            height: 75px;
+            width: 75px;
+            background-color: rgb(22, 22, 102);
+            border-radius: 50%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #star{
+            font-size: 25px;
+            color: orange;
+        }
+        #contentHeading{
+            font-size: 45px;
+            color: white;
+            margin-top: 40px;
+        }
+        #para{
+            margin-top: 25px;
+            font-size: 20px;
+            color: whitesmoke;
+            line-height: 30px;
+            font-style: normal;
+        }
+        #ratingBox{
+            height: 70px;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .count{
+            height: 67px;
+            width: 67px;
+            background-color: rgb(64, 64, 171);
+            border-radius: 50%;
+            font-size: 23px;
+            color:white;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #btn{
+            height: 65px;
+            width: 498px;
+            font-size: 20px;
+            background-color: orange;
+            margin-top: 45px;
+            border:none;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="star_container">
+            <i id="star" class="fa-solid fa-star"></i>
+        </div>
+        <div>
+            <h1 id="contentHeading">How did we do?</h1>
+            <p id="para">Please let us know how we did with your support request.All feedback is appreciated to help us improve our offering!</p>
+            <div id="ratingBox">
+                <div class="count">1</div>
+                <div class="count">2</div>
+                <div class="count">3</div>
+                <div class="count">4</div>
+                <div class="count">5</div>
+                
+            </div>
+            <button id="btn">SUBMIT</button>
+        </div>
+    </div>
+</body>
+</html>

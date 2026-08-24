@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #container{
+            height:600px;
+            width:900px;
+            background-color: white;
+            margin-top: 70px;
+            margin-left: 275px;
+        }
+        #box1{
+            height: 400px;
+            width:900px;
+            background-color: red;
+            display: flex;
+        }
+        #box2{
+            height: 200px;
+            width:900px;
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            justify-content:space-evenly;
+
+        }
+        #Sub-box1{
+            height:400px;
+            width:450px;
+            background-color: red;
+        }
+        #Sub-box2{
+            height:400px;
+            width:450px;
+            background-color: blue;
+        }
+        .circle{
+            height:120px;
+            width:120px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        i{
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" >
+        <div id="box1">
+            <div id="Sub-box1"></div>
+            <div id="Sub-box2"></div>
+        </div>
+    <div id="box2">
+        <div class="circle">
+            <i style="color:red; align-items: center; " class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="circle">
+            <i style="color:blue; align-items: center; " class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="circle">
+            <i style="color:skyblue; align-items: center; " class="fa-brands fa-twitter"></i>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

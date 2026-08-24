@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" method="get" >
+        <!-- no validation we have to place the novalidate -->
+        <fieldset>
+            <legend><h2>Information</h2></legend>
+        <label for="uname">User Name : </label>
+        <input type="text" id="uname" name="username">
+        <br><br>
+        <label for="pass">Password : </label>
+        <input type="password" id="pass" name="password"
+        pattern="[A-Ka-k0-9@#$]{6,9}">
+        <br><br>
+        <label for="email">Email : </label>
+        <input type="text" id="email" name="mail" required
+        readonly value="sunny@gmail.com"/>
+        <br><br>
+        <label for="mobile">Contact Number : </label>
+        <input type="tel" id="mobile" name="mobileno" minlength="10" maxlength="10">
+        <br><br>
+        <label for="gen">Gender : </label>
+        <label for="male">Male</label>
+        <input type="radio" checked value="male" id="male" name="gen">
+        <label for="female">Female</label>
+        <input type="radio" disabled value="female" id="female" name="gen">
+        <label for="others">Others</label>
+        <input type="radio" value="others" id="others" name="gen"><br><br>
+        <label for="doj">Date of Joining : </label>
+        <input type="date" min="2026-08-01" max="2026-08-30" id="" name="">
+        <br><br>
+        <label for="">Linkedin : </label>
+        <input type="url" >
+        <br><br>
+        <label for="">Resume : </label>
+        <input type="file" name="" id="" accept=".png"><br><br>
+        <label for="">Degree : </label>
+        <select name="" id="">
+            <option value="">CSE</option>
+            <option value="">IT</option>
+            <option value="">EEE</option>
+        </select><br><br>
+        <label for="">Departments : 
+            <select name="" id="">
+                <optgroup label="CSE">
+                    <option value="">CyperSecurity</option>
+                    <option value="">Ai-Ml</option>
+                </optgroup>
+                <optgroup label="IT">
+                    <option value="">AI</option>
+                    <option value="">DS</option>
+                </optgroup>
+                <optgroup label="EEE">
+                    <option value="">BEEE</option>
+                    <option value="">Network Security</option>
+                </optgroup>
+            </select>
+        </label>
+        <br><br>
+        <label for="">Courses : 
+            <input type="text" list="course">
+            <datalist id="course">
+                <option value="Hypertext markup Language">Html</option>
+                <option value="Cascading Style sheet">Css</option>
+                <option value="Java Script">js</option>
+            </datalist>
+        </label>
+        <br><br>
+        <label for=""> Address</label>
+        <textarea name="address"
+        minlength="10"
+        maxlength="30"
+        id="" cols="30" rows="5"></textarea><br><br>
+        <label for="">Experience</label>
+        <input type="range" name="exp" step="10">
+        <!-- <button>Submit</button> -->
+        <br><br>
+        <input type="submit"><br><br>
+        <input type="reset">
+        </fieldset>
+    </form>
+</body>
+</html>
