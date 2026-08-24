@@ -1,0 +1,48 @@
+# Portfolio Project Requirements
+# Python 3.8+
+
+# Web Framework & Backend
+Flask==2.3.3
+Werkzeug==2.3.7
+
+# Database
+SQLAlchemy==2.0.21
+pymysql==1.1.0
+
+# Utilities
+python-dotenv==1.0.0
+requests==2.31.0
+
+# Data Processing
+pandas==2.0.3
+numpy==1.24.3
+
+# API Development
+Flask-RESTful==0.3.10
+Flask-CORS==4.0.0
+
+# Authentication & Security
+PyJWT==2.8.0
+bcrypt==4.0.1
+
+# Testing
+pytest==7.4.0
+pytest-cov==4.1.0
+
+# Code Quality
+black==23.7.0
+flake8==6.0.0
+pylint==2.17.5
+
+# Development Tools
+jupyter==1.0.0
+ipython==8.14.0
+
+# Logging & Monitoring
+python-logging-loki==0.3.2
+
+# Documentation
+Sphinx==7.1.2
+
+# NOTE: Install with: pip install -r requirements.txt
+# For development: pip install -r requirements-dev.txt
