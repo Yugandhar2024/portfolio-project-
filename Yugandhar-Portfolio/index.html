@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kunasani Yugandhar — Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">&lt;KY /&gt;</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"></div>
+      </div>
+      <div class="loader-text">INITIALIZING QUANTUM PORTFOLIO... <span id="loader-pct">0</span>%</div>
+    </div>
+  </div>
+
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"><span class="ring-bl"></span><span class="ring-br"></span></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <nav>
+    <div class="nav-logo">&lt;KY /&gt;</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle Navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav-overlay">
+    <ul class="mobile-nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow">Java Full-Stack Developer<span class="blink"></span></div>
+          <h1 class="hero-name">Kunasani<br><span>Yugandhar</span></h1>
+          <p class="hero-role">Java developer building scalable web applications with <strong>Java, Spring Boot</strong><br>
+            and modern frontend technologies. Turning ideas into reliable digital experiences.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="avatar-wrap">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring2"></div>
+            <div class="avatar-circle">
+
+              <svg class="avatar-svg" viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="bgG" cx="50%" cy="60%" r="70%">
+                    <stop offset="0%" stop-color="#0a1628"/>
+                    <stop offset="100%" stop-color="#030712"/>
+                  </radialGradient>
+                  <radialGradient id="skinG" cx="45%" cy="35%" r="65%">
+                    <stop offset="0%" stop-color="#c4845a"/>
+                    <stop offset="100%" stop-color="#9a5e35"/>
+                  </radialGradient>
+                  <radialGradient id="skinG2" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#b87848"/>
+                    <stop offset="100%" stop-color="#8c4f28"/>
+                  </radialGradient>
+                  <radialGradient id="hoodiG" cx="50%" cy="20%" r="90%">
+                    <stop offset="0%" stop-color="#1a3a5c"/>
+                    <stop offset="100%" stop-color="#0a1e35"/>
+                  </radialGradient>
+                  <linearGradient id="scanG" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#00f5ff" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#00f5ff" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="hairG" x1="30%" y1="0%" x2="70%" y2="100%">
+                    <stop offset="0%" stop-color="#2a1f3d"/>
+                    <stop offset="100%" stop-color="#0f0a1a"/>
+                  </linearGradient>
+                  <filter id="glow2">
+                    <feGaussianBlur stdDeviation="2.5" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <filter id="softShadow">
+                    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+                  </filter>
+                  <clipPath id="cc"><circle cx="160" cy="160" r="158"/></clipPath>
+                </defs>
+
+
+                <circle cx="160" cy="160" r="160" fill="url(#bgG)"/>
+
+
+                <g stroke="rgba(0,245,255,0.05)" stroke-width="0.7" clip-path="url(#cc)">
+                  <line x1="0" y1="64" x2="320" y2="64"/>  <line x1="0" y1="128" x2="320" y2="128"/>
+                  <line x1="0" y1="192" x2="320" y2="192"/> <line x1="0" y1="256" x2="320" y2="256"/>
+                  <line x1="64" y1="0" x2="64" y2="320"/>   <line x1="128" y1="0" x2="128" y2="320"/>
+                  <line x1="192" y1="0" x2="192" y2="320"/> <line x1="256" y1="0" x2="256" y2="320"/>
+                </g>
+
+
+                <ellipse cx="160" cy="318" rx="118" ry="72" fill="#0e2540"/>
+
+                <ellipse cx="160" cy="305" rx="95" ry="55" fill="#122d4e" opacity="0.6"/>
+
+                <path d="M148,268 Q144,285 140,310" stroke="#1e4a78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M172,268 Q176,285 180,310" stroke="#1e4a78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+                <path d="M128,262 Q160,280 192,262 Q178,255 160,258 Q142,255 128,262 Z" fill="#0d2440"/>
+
+                <path d="M132,264 Q160,276 188,264 Q178,260 160,262 Q142,260 132,264 Z" fill="#0a1d32"/>
+
+                <path d="M143,222 Q143,250 148,260 Q160,265 172,260 Q177,250 177,222 Z" fill="url(#skinG2)"/>
+
+                <path d="M148,240 Q160,248 172,240 Q168,252 160,255 Q152,252 148,240 Z" fill="#7a3f1a" opacity="0.4"/>
+
+
+                <ellipse cx="160" cy="166" rx="70" ry="84" fill="url(#skinG)" filter="url(#softShadow)"/>
+
+                <ellipse cx="108" cy="178" rx="18" ry="22" fill="#8a4520" opacity="0.18"/>
+                <ellipse cx="212" cy="178" rx="18" ry="22" fill="#8a4520" opacity="0.18"/>
+
+                <ellipse cx="160" cy="120" rx="36" ry="22" fill="#d4906a" opacity="0.22"/>
+
+
+                <ellipse cx="90" cy="170" rx="11" ry="15" fill="#b07040"/>
+                <ellipse cx="230" cy="170" rx="11" ry="15" fill="#b07040"/>
+                <ellipse cx="90" cy="170" rx="6" ry="9" fill="#9a5c30"/>
+                <ellipse cx="230" cy="170" rx="6" ry="9" fill="#9a5c30"/>
+
+
+                <path d="M95,155 Q88,110 95,85 Q108,55 140,45 Q160,40 178,47 Q210,58 222,88 Q230,110 225,155
+                         Q215,100 205,82 Q192,62 170,55 Q160,52 148,56 Q126,64 114,86 Q102,106 95,155 Z"
+                      fill="url(#hairG)"/>
+
+                <path d="M110,82 Q118,68 128,72 Q122,78 118,88 Z" fill="#1e1530"/>
+                <path d="M128,62 Q138,50 150,54 Q144,62 140,72 Z" fill="#231a38"/>
+                <path d="M152,48 Q162,40 172,45 Q166,54 162,64 Z" fill="#1e1530"/>
+                <path d="M173,52 Q183,46 192,54 Q186,62 180,70 Z" fill="#231a38"/>
+                <path d="M192,66 Q200,58 208,68 Q203,76 198,82 Z" fill="#1e1530"/>
+
+                <path d="M94,130 Q86,118 90,108 Q96,96 104,98 Q96,108 94,122 Z" fill="#190f2a"/>
+                <path d="M226,130 Q234,118 230,108 Q224,96 216,98 Q224,108 226,122 Z" fill="#190f2a"/>
+
+                <path d="M118,82 Q128,74 140,78 Q130,84 124,92 Z" fill="#130e20" opacity="0.8"/>
+                <path d="M168,72 Q178,66 190,72 Q182,80 176,88 Z" fill="#130e20" opacity="0.8"/>
+
+                <path d="M140,50 Q148,38 158,42 Q150,52 146,62 Z" fill="#1a1128" opacity="0.9"/>
+                <path d="M162,44 Q170,34 180,40 Q172,50 168,60 Z" fill="#1a1128" opacity="0.9"/>
+
+
+                <path d="M114,130 Q128,122 143,126" stroke="#1a0f08" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M177,126 Q192,122 206,130" stroke="#1a0f08" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+                <path d="M116,130 Q129,124 142,127" stroke="#2e1c0f" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+                <path d="M178,127 Q191,124 205,130" stroke="#2e1c0f" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+
+                <ellipse cx="130" cy="152" rx="18" ry="12" fill="#f0ece4"/>
+
+                <ellipse cx="130" cy="153" rx="10" ry="10" fill="#2a1a0a"/>
+                <ellipse cx="130" cy="153" rx="7" ry="7" fill="#180f04"/>
+
+                <circle cx="134" cy="149" r="2.5" fill="white" opacity="0.95"/>
+                <circle cx="127" cy="155" r="1.2" fill="white" opacity="0.4"/>
+
+                <path d="M112,152 Q130,143 148,152" stroke="#7a4820" stroke-width="1" fill="none" opacity="0.5"/>
+
+                <path d="M113,154 Q130,162 147,154" stroke="#9a5830" stroke-width="0.7" fill="none" opacity="0.3"/>
+
+
+                <ellipse cx="190" cy="152" rx="18" ry="12" fill="#f0ece4"/>
+
+                <ellipse cx="190" cy="153" rx="10" ry="10" fill="#2a1a0a"/>
+                <ellipse cx="190" cy="153" rx="7" ry="7" fill="#180f04"/>
+
+                <circle cx="194" cy="149" r="2.5" fill="white" opacity="0.95"/>
+                <circle cx="187" cy="155" r="1.2" fill="white" opacity="0.4"/>
+
+                <path d="M172,152 Q190,143 208,152" stroke="#7a4820" stroke-width="1" fill="none" opacity="0.5"/>
+
+                <path d="M173,154 Q190,162 207,154" stroke="#9a5830" stroke-width="0.7" fill="none" opacity="0.3"/>
+
+
+                <rect x="108" y="141" width="44" height="26" rx="7" fill="rgba(0,245,255,0.04)" stroke="#c8a84a" stroke-width="1.8"/>
+
+                <rect x="168" y="141" width="44" height="26" rx="7" fill="rgba(0,245,255,0.04)" stroke="#c8a84a" stroke-width="1.8"/>
+
+                <path d="M152,154 Q160,150 168,154" stroke="#c8a84a" stroke-width="1.8" fill="none"/>
+
+                <line x1="108" y1="154" x2="90" y2="158" stroke="#c8a84a" stroke-width="1.5"/>
+                <line x1="212" y1="154" x2="230" y2="158" stroke="#c8a84a" stroke-width="1.5"/>
+
+                <rect x="109" y="142" width="42" height="24" rx="6" fill="rgba(0,245,255,0.03)"/>
+                <rect x="169" y="142" width="42" height="24" rx="6" fill="rgba(0,245,255,0.03)"/>
+
+                <rect x="108" y="141" width="44" height="26" rx="7" fill="none" stroke="#00f5ff" stroke-width="0.5" opacity="0.4"/>
+                <rect x="168" y="141" width="44" height="26" rx="7" fill="none" stroke="#00f5ff" stroke-width="0.5" opacity="0.4"/>
+
+
+                <path d="M157,172 Q154,188 150,193 Q158,197 170,193 Q166,188 163,172 Z" fill="#9a5830" opacity="0.55"/>
+
+                <ellipse cx="152" cy="193" rx="5" ry="3.5" fill="#7a3f18" opacity="0.6"/>
+                <ellipse cx="168" cy="193" rx="5" ry="3.5" fill="#7a3f18" opacity="0.6"/>
+
+
+                <path d="M144,210 Q160,220 176,210" stroke="#7a3f18" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+                <path d="M144,210 Q152,206 160,208 Q168,206 176,210" stroke="#8a4820" stroke-width="1.2" fill="none"/>
+
+                <path d="M147,211 Q160,217 173,211 Q168,214 160,215 Q152,214 147,211 Z" fill="#b06040" opacity="0.35"/>
+
+
+                <path d="M148,203 Q155,200 160,202 Q165,200 172,203 Q165,207 160,205 Q155,207 148,203 Z" fill="#1a0f08" opacity="0.75"/>
+
+                <path d="M152,220 Q160,228 168,220 Q164,225 160,227 Q156,225 152,220 Z" fill="#1a0f08" opacity="0.45"/>
+
+                <path d="M118,195 Q114,205 116,215" stroke="#5a3010" stroke-width="0.8" fill="none" opacity="0.3"/>
+                <path d="M202,195 Q206,205 204,215" stroke="#5a3010" stroke-width="0.8" fill="none" opacity="0.3"/>
+
+                <rect x="2" y="160" width="316" height="1" fill="url(#scanG)" opacity="0.6"/>
+                <g stroke="#00f5ff" stroke-width="1.2" fill="none" opacity="0.5" filter="url(#glow2)">
+                  <path d="M22,22 L22,38 M22,22 L38,22"/>
+                  <path d="M298,22 L298,38 M298,22 L282,22"/>
+                  <path d="M22,298 L22,282 M22,298 L38,298"/>
+                  <path d="M298,298 L298,282 M298,298 L282,298"/>
+                </g>
+                <g font-family="'Space Grotesk', sans-serif" font-size="8.5" fill="#00f5ff" opacity="0.5" filter="url(#glow2)">
+                  <text x="24" y="58">&lt;dev/&gt;</text>
+                  <text x="268" y="58">ML</text>
+                  <text x="24" y="280">{AI}</text>
+                  <text x="260" y="280">CSE</text>
+                </g>
+
+                <circle cx="62" cy="62" r="1.8" fill="#00f5ff" opacity="0.6"/>
+                <circle cx="258" cy="62" r="1.8" fill="#a855f7" opacity="0.6"/>
+                <circle cx="62" cy="258" r="1.8" fill="#a855f7" opacity="0.6"/>
+                <circle cx="258" cy="258" r="1.8" fill="#00f5ff" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="status-dot">
+              <div class="pulse"></div>Open to Opportunities
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="section-line"></div>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>I'm a Computer Science Engineering graduate and fresher passionate about starting my career as a Java
+            Full-Stack Developer. I enjoy building clean, responsive, and user-friendly web applications.</p>
+          <p>My technical skills include Java, Spring Boot, SQL, MySQL, HTML, CSS, ReactJS, Git, and GitHub. I am
+            eager to apply these skills, learn from experienced teams, and contribute to real-world projects.</p>
+          <p>I am a motivated problem solver who enjoys learning new technologies and turning ideas into reliable
+            software through consistent practice and teamwork.</p>
+        </div>
+        <div class="stat-cards">
+          <div class="stat-card reveal">
+            <div class="stat-num">8.27</div>
+            <div class="stat-label">B.Tech CGPA</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">9.2</div>
+            <div class="stat-label">Intermediate CGPA</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">4+</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-label">Technical Skills</div>
+      <h2 class="section-title">My Tech Stack</h2>
+      <div class="section-line"></div>
+      <div class="skills-grid">
+        <div class="skill-cat reveal">
+          <div class="skill-cat-icon">☕</div>
+          <div class="skill-cat-title">Languages</div>
+          <div class="skill-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Python (Basics)</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-icon">⚙</div>
+          <div class="skill-cat-title">Backend</div>
+          <div class="skill-tags">
+            <span class="tag">Spring Boot</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-icon">🌐</div>
+          <div class="skill-cat-title">Frontend</div>
+          <div class="skill-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">ReactJS</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <div class="skill-cat-icon">🗄️</div>
+          <div class="skill-cat-title">Database & Tools</div>
+          <div class="skill-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title">What I've Built</h2>
+      <div class="section-line"></div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-num">01 / PROJECT</div>
+          <div class="project-title">Weather App 2026</div>
+          <div class="project-desc">A responsive weather application that fetches real-time temperature, humidity,
+            wind speed, and weather conditions for any city using the OpenWeatherMap REST API. Features dynamic DOM
+            updates, weather-based icons and styling, plus error handling for invalid inputs in a clean,
+            mobile-responsive interface.</div>
+          <div class="project-tech">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">OpenWeatherMap API</span>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-num">02 / PROJECT</div>
+          <div class="project-title">Knowledge-Informed Machine Learning for Cancer Diagnosis and Prognosis</div>
+          <div class="project-desc">A full-stack graph-based deep learning system that predicts cancer type and
+            prognosis from multi-omics data and biological knowledge. Its Graph Attention Network achieved 96%
+            accuracy across six cancer types, with explainable gene and pathway insights through a React, FastAPI,
+            and MySQL application.</div>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">PyTorch</span>
+            <span class="tech-badge">PyTorch Geometric</span>
+            <span class="tech-badge">NetworkX</span>
+            <span class="tech-badge">FastAPI</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">SQLAlchemy</span>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-num">03 / PROJECT</div>
+          <div class="project-title">3D Portfolio</div>
+          <div class="project-desc">A visually immersive personal portfolio featuring 3D animations, cinematic
+            transitions, and interactive elements. Demonstrates mastery of advanced CSS and JavaScript animation
+            techniques.</div>
+          <div class="project-tech">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">3D Animations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Internships & Certifications</h2>
+      <div class="section-line"></div>
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-title">Java Full Stack Development</div>
+          <div class="tl-org">BIST Technologies</div>
+          <div class="tl-detail">Certification covering full-stack development with Java</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-title">Web Development</div>
+          <div class="tl-org">BIST Technologies</div>
+          <div class="tl-detail">Hands-on certification in building responsive websites with modern web technologies</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-title">Google AI Virtual Internship</div>
+          <div class="tl-org">Eduskills</div>
+          <div class="tl-detail">Virtual internship focused on applying artificial intelligence and machine learning concepts to practical projects</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2024</div>
+          <div class="tl-title">Google AI-ML Internship</div>
+          <div class="tl-org">Eduskills · Google</div>
+          <div class="tl-detail">Applied AI and Machine Learning internship in collaboration with Google</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-label">Education</div>
+      <h2 class="section-title">Academic Journey</h2>
+      <div class="section-line"></div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-degree">B.Tech — Computer Science Engineering</div>
+          <div class="edu-school">Sri Vasavi Institute of Engineering and Technology, Nandamuru</div>
+          <div class="edu-meta">
+            <span class="edu-year">2022 – 2026</span>
+            <span class="cgpa-badge">CGPA: 8.27</span>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-degree">Intermediate (MPC)</div>
+          <div class="edu-school">Star Junior College, Machilipatnam</div>
+          <div class="edu-meta">
+            <span class="edu-year">2020 – 2022</span>
+            <span class="cgpa-badge">CGPA: 9.2</span>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-degree">Secondary School (SSC)</div>
+          <div class="edu-school">St John's EM High School, Batumilli</div>
+          <div class="edu-meta">
+            <span class="edu-year">2019 – 2020</span>
+            <span class="cgpa-badge">CGPA: 9.50</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="section-line"></div>
+      <div class="contact-wrap reveal">
+        <p class="contact-subtitle">I'm actively looking for full-stack internship opportunities. Whether you have a
+          role, a project idea, or just want to say hi — my inbox is always open.</p>
+        <div class="contact-links">
+          <a href="mailto:kunasaniyugandhar2004@gmail.com" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            kunasaniyugandhar2004@gmail.com
+          </a>
+          <a href="tel:+919032677730" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            +91 9032677730
+          </a>
+          <a href="https://www.linkedin.com/in/yugandharkunasani/" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Yugandhar2024" target="_blank" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed & built by Kunasani Yugandhar &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; <span
+        style="color:var(--cyan)">crafted with passion</span></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
